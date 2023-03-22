@@ -17,7 +17,7 @@ results. Yet, most existing methods perform pixel-wise classification without co
 > cross-dataset generalization ability.
 
 ![image](images/pipeline.png)
-#### Pipeline
+##### <center>Fig1.: Pipeline</center>
 
 ## Usage
 
@@ -57,13 +57,17 @@ python test_multi_process.py --data_path {test data path} --ckpt_path {model pat
 ## Results
 Model trained on ACDC dataset can be found [_**here**_](logs/). 
 ![image](images/fig1.png)
+##### <center> Fig2.: Comparison of averaged performance between the proposed ShapeKD and some baseline models under intradataset and cross-dataset evaluation on five medical image segmentation tasks of different modalities.</center>
+
+![image](images/feature.png)
+##### <center> Fig3.: Visualization of the penultimate layer feature of the proposed ShapeKD and the baseline U-Net on ACDC testing set (Top) and REFUGE testing set (Bottom).</center>
+
 ## License
 This project is released under the [_**Apache 2.0**_](LICENSE) license.
 
-
 ## Citation
 ```bibtex
-@inproceedings{Xu.2023ShapeKD,
+@inproceedings{Dong2023ShapeKD,
   title={ShapeKD: Shape Knowledge Distillation for Medical Image Segmentation},
   author={Yongchao Xu and Wenhui Dong and Bo du},
 }
