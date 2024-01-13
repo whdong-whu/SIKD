@@ -14,7 +14,7 @@ results. Yet, most existing methods perform pixel-wise classification without co
 > cross-dataset generalization ability.
 
 ![image](images/pipeline.png)
-##### <center>Fig1.: Pipeline</center>
+##### <center>Fig1. Pipeline</center>
 
 ## Usage
 
