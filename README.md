@@ -1,8 +1,5 @@
 # ShapeKD
 ### This repository provides code for [ShapeKD: Shape Knowledge Distillation for Medical Image Segmentation ](https://arxiv.org/abs/2108.07774)
-## Official PyTorch Implementation
-[Yongchao Xu] Wenhui Dong and Bo du(https://sites.google.com/view/yongchaoxu)
-
 
 >**abstract:**
 >—Many medical image segmentation methods based on U-Net or its alternatives have been proposed and achieved impressive
@@ -41,7 +38,6 @@ python SliceMaker.py --in_path {data path} --out_path {output path} --data_json 
 ```
 python -m torch.distributed.launch --nproc_per_node {num_gpus} --master_port $RANDOM tools/train.py --batch_size {batch size per gpu} --mgpus {gpu_ids} --output_dir {output path} --imgmean True
 ```
-Or you can download the teacher model from [_**Baidu Disk**_](https://drive) or [_**Google Driver**_](https:).
 - Train the student model by running the following command:
 ```
 python -m torch.distributed.launch --nproc_per_node {num_gpus} --master_port $RANDOM tools/train.py --batch_size {batch size per gpu} --mgpus {gpu_ids} --output_dir {output path} --kd True --ckpt_t {teacher model path}
@@ -53,15 +49,6 @@ python -m torch.distributed.launch --nproc_per_node {num_gpus} --master_port $RA
 python test_multi_process.py --data_path {test data path} --ckpt_path {model path} --temp_path {temp path} --gpu {gpu_id}
 ```
 
-
-## Results
-Model trained on ACDC dataset can be found [_**here**_](logs/). 
-![image](images/fig1.png)
-##### <center> Fig2.: Comparison of averaged performance between the proposed ShapeKD and some baseline models under intradataset and cross-dataset evaluation on five medical image segmentation tasks of different modalities.</center>
-
-![image](images/feature.png)
-##### <center> Fig3.: Visualization of the penultimate layer feature of the proposed ShapeKD and the baseline U-Net on ACDC testing set (Top) and REFUGE testing set (Bottom).</center>
-
 ## License
 This project is released under the [_**Apache 2.0**_](LICENSE) license.
 
@@ -69,6 +56,6 @@ This project is released under the [_**Apache 2.0**_](LICENSE) license.
 ```bibtex
 @inproceedings{Dong2023ShapeKD,
   title={ShapeKD: Shape Knowledge Distillation for Medical Image Segmentation},
-  author={Yongchao Xu and Wenhui Dong and Bo du},
+  author={Wenhui Dong and Yongchao Xu and Bo du},
 }
 ```
