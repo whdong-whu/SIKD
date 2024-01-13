@@ -1,5 +1,5 @@
 # ShapeKD
-### This repository provides code for [ShapeKD: Shape Knowledge Distillation for Medical Image Segmentation ](https://arxiv.org/abs/2108.07774)
+### This repository provides code for [Shape-intensity knowledge distillation for robust medical image segmentation ](https://arxiv.org/abs/2108.07774)
 
 >**abstract:**
 >—Many medical image segmentation methods based on U-Net or its alternatives have been proposed and achieved impressive
