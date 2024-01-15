@@ -3,7 +3,7 @@
 
 >**abstract:**
 Many medical image segmentation methods based on U-Net and its alternatives have achieved impressive results. Yet, most existing methods perform pixel-wise classification without taking into account the shape-intensity prior information. This may lead to implausible segmentation results, in particular for images of unseen datasets. In this paper, we propose a novel approach to incorporate joint shape-intensity prior information into the segmentation network. Specifically, we first train a segmentation network (regarded as the teacher network) on class-wisely averaged training images to extract valuable shape-intensity information, which is then transferred to a student segmentation network with the same network architecture as the teacher via knowledge distillation. In this way, the student network regarded as the final segmentation model can effectively integrate the shape-intensity prior information, yielding more accurate segmentation results.
-Despite its simplicity, experiments on five medical image segmentation tasks of different modalities demonstrate that the proposed Shape-Intensity Knowledge Distillation (\textit{\our}) consistently improves several baseline models under intra-dataset evaluation, and significantly improves the cross-dataset generalization ability. 
+Despite its simplicity, experiments on five medical image segmentation tasks of different modalities demonstrate that the proposed Shape-Intensity Knowledge Distillation (\textit{SIKD}) consistently improves several baseline models under intra-dataset evaluation, and significantly improves the cross-dataset generalization ability. 
 
 ![image](images/pipeline.png)
 ##### <center>Fig1. Pipeline</center>
