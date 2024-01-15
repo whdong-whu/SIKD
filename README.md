@@ -2,16 +2,8 @@
 ### This repository provides code for [Shape-intensity knowledge distillation for robust medical image segmentation ](https://arxiv.org/abs/2108.07774)
 
 >**abstract:**
->—Many medical image segmentation methods based on U-Net or its alternatives have been proposed and achieved impressive
-results. Yet, most existing methods perform pixel-wise classification without considering the shape prior information, 
-> which is important for plausible segmentation. In this paper, we novelly leverage knowledge distillation to incorporate 
-> shape information. Precisely, we train the teacher segmentation network on class-wisely averaged training images to
-> extract valuable shape knowledge, which is then transferred to the student model trained on the original training
-> images using segmentation and distillation loss. The student model effectively acquires the shape knowledge from 
-> the teacher model, yielding more accurate segmentation. Despite its simplicity, experiments on five medical image 
-> segmentation tasks of different modalities demonstrate that the proposed Shape Knowledge Distillation (ShapeKD) 
-> consistently improves several baseline models under intra-dataset evaluation, and significantly improves the 
-> cross-dataset generalization ability.
+Many medical image segmentation methods based on U-Net and its alternatives have achieved impressive results. Yet, most existing methods perform pixel-wise classification without taking into account the shape-intensity prior information. This may lead to implausible segmentation results, in particular for images of unseen datasets. In this paper, we propose a novel approach to incorporate joint shape-intensity prior information into the segmentation network. Specifically, we first train a segmentation network (regarded as the teacher network) on class-wisely averaged training images to extract valuable shape-intensity information, which is then transferred to a student segmentation network with the same network architecture as the teacher via knowledge distillation. In this way, the student network regarded as the final segmentation model can effectively integrate the shape-intensity prior information, yielding more accurate segmentation results.
+Despite its simplicity, experiments on five medical image segmentation tasks of different modalities demonstrate that the proposed Shape-Intensity Knowledge Distillation (\textit{\our}) consistently improves several baseline models under intra-dataset evaluation, and significantly improves the cross-dataset generalization ability. 
 
 ![image](images/pipeline.png)
 ##### <center>Fig1. Pipeline</center>
