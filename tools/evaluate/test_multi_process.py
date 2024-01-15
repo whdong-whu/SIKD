@@ -21,6 +21,14 @@ parser.add_argument('--checkpoint path', type=str, help='checkpoint path')
 parser.add_argument('--temp_path', type=str, help='temp path for saving prediction')
 parser.add_argument('--gpu', type=str, default='0', help='gpu id')
 
+def normalize_slice(image_data):
+    mean = 63.19523533061758
+    std = 70.74166957523165
+    for i in range(image_data.shape[2]):
+        image_data[:,:, i] = (image_data[:,:, i] -mean) / std
+
+    return image_data
+
 class ACDC(Dataset):
     def __init__(self,
                  data_path):
@@ -40,6 +48,7 @@ class ACDC(Dataset):
 
         vol = nib.load(vol_path)
         vol = vol.get_fdata()
+        vol = normalize_slice(vol)
         seg = nib.load(seg_path)
         seg = seg.get_fdata()
         vol = vol.transpose((2, 1, 0))
