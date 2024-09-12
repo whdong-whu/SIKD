@@ -49,5 +49,7 @@ This project is released under the [_**Apache 2.0**_](LICENSE) license.
 @inproceedings{Dong2023ShapeKD,
   title={ShapeKD: Shape Knowledge Distillation for Medical Image Segmentation},
   author={Wenhui Dong and Yongchao Xu and Bo du},
+  journal={Front. Comput. Sci.},
+  year={2024}
 }
 ```
