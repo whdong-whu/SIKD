@@ -1,4 +1,4 @@
-# ShapeKD
+# SIKD
 ### This repository provides code for [Shape-intensity knowledge distillation for robust medical image segmentation ](https://arxiv.org)
 
 >**abstract:**
